@@ -247,6 +247,7 @@ a {
 
 .header-index {
   background-image: url("../images/bg/blue7.jpg");
+  background: #070725;
   background-size: cover;
   background-position: top;
 
@@ -682,6 +683,7 @@ aside .pages {
 .hero {
   background-image: url("../images/bg/blue7.jpg");
   background-size: cover;
+  background: #070725;
   background-position: center;
   background-repeat: no-repeat;
   padding: 172px 0 279px 0;

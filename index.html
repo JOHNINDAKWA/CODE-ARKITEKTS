@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="Images/fave_icon.png" type="image/x-icon" />
+
+    <!-- Scroll cdn  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      integrity="sha256-KsG44mN2Hn8FOu4skM5GyCU7uE3R6DEj8+r7Jd1YPuA="
+      crossorigin="anonymous"
+    />
+
+    <!-- <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  /> -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous"
+  />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/easy.css" />
+    <link rel="stylesheet" href="css/slick.min.css" />
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="header-index">
+        <!-- header section -->
+        <header>
+          <nav class="container navbar">
+            <div class="container-nav flex">
+              <a href="/" class="navbar-logo">
+                <img src="Images/CA-logo.png" alt="" />
+              </a>
+              <button onclick="openNav()" class="navbar-toggler" type="button">
+                <span><i class="fa-solid fa-bars"></i></span>
+              </button>
+
+              <ul class="navbar-nav">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/" class="nav-link">About</a></li>
+                <li><a href="/" class="nav-link">Contact</a></li>
+                <li class="dropdown">
+                  <a href="/" class="nav-link">Pages</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/" class="dropdown-item">Services</a></li>
+                    <li><a href="/" class="dropdown-item">Pricing Plan</a></li>
+                    <li><a href="/" class="dropdown-item">Portfolio</a></li>
+                    <li><a href="/" class="dropdown-item">Team</a></li>
+                    <li><a href="/" class="dropdown-item">Testimonials</a></li>
+                    <li><a href="/" class="dropdown-item">Blog</a></li>
+                    <li><a href="/" class="dropdown-item">FAQ</a></li>
+                    <li><a href="/" class="dropdown-item">Coming Soon</a></li>
+                    <li><a href="/" class="dropdown-item">404</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav-right flex">
+              <p>Call Us <span>+2547 02207999</span></p>
+
+              <!-- header buttons -->
+              <i
+                onclick="open_search()"
+                class="fa-solid fa-magnifying-glass"
+              ></i>
+              <i onclick="toggleRight()" class="fa-solid fa-bars"></i>
+            </div>
+          </nav>
+
+          <!-- sidebar -->
+          <aside id="mysidepanel" class="sidepanel">
+            <div class="sidebar flex">
+              <a href="">
+                <img src="Images/CA-logo.png" alt="" />
+              </a>
+              <button
+                onclick="closeNav()"
+                type="button"
+                class="closebtn btn_hover"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div>
+              <!-- side menus -->
+              <ul>
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/" class="nav-link">About</a></li>
+                <li><a href="/" class="nav-link">Contact</a></li>
+                <li class="pages"><a href="/" class="nav-link">More</a></li>
+                <li class="collapse-btn">
+                  <a
+                    href="/"
+                    class="nav-link plus_collapse"
+                    data-bs-toggle="collapse"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <div class="collapse" id="pages">
+                    <ul>
+                      <li><a href="/" class="nav-link">Services</a></li>
+                      <li><a href="/" class="nav-link">Pricing Plan</a></li>
+                      <li><a href="/" class="nav-link">Portfolio</a></li>
+                      <li><a href="/" class="nav-link">Team</a></li>
+                      <li><a href="/" class="nav-link">Testimonials</a></li>
+                      <li><a href="/" class="nav-link">FAQ</a></li>
+                      <li><a href="/" class="nav-link">Blog</a></li>
+                      <li><a href="/" class="nav-link">Blog</a></li>
+                      <li><a href="/" class="nav-link">404</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- searchbar -->
+          <div id="search-bar">
+            <div onclick="close_search()" class="btn_hover">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <form action="#" method="search">
+              <input type="search" required placeholder="Search..." />
+              <button class="btn_hover" type="submit">Search</button>
+            </form>
+          </div>
+
+          <section class="header-right-sidebar" id="right-side">
+            <div class="flex flex-sb">
+              <a href="/">
+                <img src="Images/CA-logo.png" alt="logo" />
+              </a>
+              <button
+                onclick="closeRight()"
+                class="close-rightsidebar fa-solid fa-xmark"
+              ></button>
+            </div>
+
+            <p class="text-center">
+              We create amazing websites and apps that people adore. Our team of experts designs and builds digital products that help your business succeed. Let's work together to make your online dreams a reality.
+            </p>
+
+            <a href="/" class="btn_hover">Discover More</a>
+            <hr />
+            <h4>Connected Details</h4>
+            <ul>
+              <li class="flex">
+                <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                <a href="#">codearkitekts@gmail.com</a>
+              </li>
+              <li class="flex">
+                <a href="#"> <i class="fa-solid fa-envelope"></i></a>
+                <a href="#">+254702207999</a>
+              </li>
+              <li class="flex">
+                <a href="#"> <i class="fa-solid fa-regular fa-clock"></i></a>
+                <a href="#">Working Hours: 8AM - 11PM <br> Sunday - Weekend Day</a>
+              </li>
+
+              <li class="flex">
+                <a href="#"> <i class="fa-solid fa-house"></i></a>
+                <a href="#">Nairobi, Kenya</a>
+              </li>
+            </ul>
+
+            <span class="flex flex-center">
+              <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+              <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+              <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+              <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+            </span>
+          </section>
+        </header>
+
+        <!-- ========hero=========== -->
+
+        <div class="hero">
+          <div class="container" data-aos="zoom-in">
+            <div>
+              <div class="hero-social-icon flex">
+                <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                <hr />
+              </div>
+
+              <div class="center-data text-center">
+                <h1>WEB AND MOBILE SOLUTIONS</h1>
+                <h3>Evolve Your Brand into a Digital Powerhouse</h3>
+                <h4>(without the Taxes!)</h4>
+                <div class="center-btn flex gap-15 mt-1">
+                  <a href="" class="btn_hover">Get Started</a>
+                  <a href="" class="btn_hover2">Discover More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+<!-- card section -->
+<section class="feature">
+  <div class="container">
+    <div class="flex">
+      <div class="header-card" data-aos="fade-up">
+        <div>
+          <figure>
+            <img
+              class="figure_img1"
+              src="Images/icon/feature1.png"
+              alt="Customized Solutions"
+            />
+          </figure>
+          <h4>CUSTOMIZED SOLUTIONS</h4>
+          <p>
+            At CODE ARKITEKTS, we tailor our solutions to meet your unique
+            needs, ensuring every project reflects your distinct vision.
+          </p>
+        </div>
+      </div>
+
+      <div class="header-card" data-aos="fade-down">
+        <div>
+          <figure>
+            <img src="Images/icon/feature3.png" alt="Creative Solutions" />
+          </figure>
+          <h4>CREATIVE SOLUTIONS</h4>
+          <p>
+            Our team thrives on creativity, delivering innovative solutions
+            that captivate your audience and elevate your brand to new heights.
+          </p>
+        </div>
+      </div>
+
+      <div class="header-card" data-aos="fade-up">
+        <div>
+          <figure>
+            <img src="Images/icon/feature2.png" alt="ROI-Driven Approach" />
+          </figure>
+          <h4>ROI-DRIVEN APPROACH</h4>
+          <p>
+            With a focus on return on investment (ROI), we implement strategies
+            that maximize your digital presence and drive measurable results.
+          </p>
+        </div>
+      </div>
+
+      <div class="header-card" data-aos="fade-down">
+        <div>
+          <figure>
+            <img src="Images/icon/feature4.png" alt="Expert Team" />
+          </figure>
+          <h4>EXPERT TEAM</h4>
+          <p>
+            Our experienced team combines skill and dedication to deliver
+            excellence in every project, ensuring your digital initiatives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- logoipsum section -->
+
+      <div class="logoipsum">
+        <div class="container">
+          <div class="flex flex-col gap-2">
+            <hr class="hr1" />
+            <h3 class="mb-15" data-aos="zoom-in">OUR CLIENTS</h3>
+          </div>
+
+          <div class="logoipsum-slider sliderlogo" data-aos="zoom-in">
+            <figure>
+              <img src="Images/home/logo1.png" alt="Logoipsum" />
+            </figure>
+            <figure>
+              <img src="Images/home/logo2.png" alt="Logoipsum" />
+            </figure>
+            <figure>
+              <img src="Images/home/logo3.png" alt="Logoipsum" />
+            </figure>
+            <figure>
+              <img src="Images/home/logo-new2.png" alt="Logoipsum" />
+            </figure>
+            <figure>
+              <img src="Images/home/logo-6-color.png" alt="Logoipsum" />
+            </figure>
+     
+            <figure>
+              <img src="Images/home/logo1.png" alt="Logoipsum" />
+            </figure>
+            <figure>
+              <img src="Images/home/logo2.png" alt="Logoipsum" />
+            </figure>
+            <figure>
+              <img src="Images/home/logo3.png" alt="Logoipsum" />
+            </figure>
+            <figure>
+              <img src="Images/home/logo-new2.png" alt="Logoipsum" />
+            </figure>
+            <figure>
+              <img src="Images/home/logo-6-color.png" alt="Logoipsum" />
+            </figure>
+          </div>
+          <hr class="hr2" />
+        </div>
+      </div>
+
+      <!-- About us section -->
+      <section class="about">
+        <div class="container">
+          <div class="about-data flex-sb">
+            <div class="w-50" data-aos="fade-up">
+              <div class="flex about-title gap-1">
+                <hr />
+                <h5>ABOUT US</h5>
+              </div>
+              <h2>Explore Our Services and Boost Your Online Presence.</h2>
+              <p>
+                At <strong>CODE ARKITEKTS</strong>,, We make awesome websites and applications. Our team is super creative and tech-savvy. Let's create something amazing together.
+              </p>
+              <div class="flex gap-1 mt-15">
+                <i class="fa-solid fa-check"></i>
+                <h5>
+                  Our mission is to transform your digital vision into reality with innovative design and cutting-edge technology.
+                </h5>
+              </div>
+
+              <div class="flex gap-1 mt-15">
+                <i class="fa-solid fa-check"></i>
+                <h5>
+                  Partner with us to elevate your brand and achieve your digital goals.
+                </h5>
+              </div>
+
+              <div class="flex gap-20 mt-3">
+                <a href="#" class="btn_hover">Get Started</a>
+                <a href="#" class="btn_hover2">Discover More</a>
+              </div>
+            </div>
+            <div class="w-50 about-imgs flex flex-center" data-aos="fade-down">
+              <div>
+                <figure>
+                  <img src="Images/home/ex1.jpg" style="width: 518px; height: 511px; object-fit: cover;"alt="about" />
+                </figure>
+              </div>
+
+              <div class="ab-count flex flex-center">
+                <div class="flex flex-center">
+                  <h2>12</h2>
+                  <h2>+</h2>
+                </div>
+                <p>year of experience</p>
+              </div>
+
+              <div class="about-hr flex gap-1">
+                <hr />
+                <h6>What we are</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- gallery section -->
+      <div class="portfolio">
+        <div class="portfolio-1">
+          <div class="container">
+            <div class="porto-center" data-aos="fade-up">
+              <div class="w-50">
+                <div class="flex gap-1">
+                  <hr class="gallery-hr1" />
+                  <h5>PORTFOLIO</h5>
+                </div>
+                <h2>Our Latest Projects</h2>
+                <p class="mt-15">
+                  Explore our diverse portfolio showcasing our recent projects. We take pride in delivering exceptional designs and innovative solutions tailored to meet your needs.
+                </p>
+              </div>
+
+              <div class="flex w-100 flex-end">
+                <a href="/" class="btn_hover2">View All Projects</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <div class="ga-bg"></div>
+          <!-- overlay -->
+          <span></span>
+
+          <div class="container" data-aos="fade-up">
+            <hr class="hr-1" />
+            <div class="tab mt-3">
+              <button class="tablinks active" onclick="open_img(event, 'all')">
+                All
+              </button>
+              <button class="tablinks" onclick="open_img(event, 'design')">
+                DESIGN
+              </button>
+              <button class="tablinks" onclick="open_img(event, 'development')">
+                DEVELOPMENT
+              </button>
+              <button class="tablinks" onclick="open_img(event, 'branding')">
+                BRANDING
+              </button>
+              <button class="tablinks" onclick="open_img(event, 'ui_ux')">
+                UI/UX
+              </button>
+              <button class="tablinks" onclick="open_img(event, 'seo')">
+                SEO
+              </button>
+            </div>
+
+
+            <div id="all" class="tabcontent" style="display: block">
+              <div class="flex flex-center">
+                <div class="flex w-100 ">
+
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/owiphotography.png" alt="Project CMS" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Owi Photography</h3>
+                          <p>An exquisite Photography Website</p>
+                          <a href="link-to-cms.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/ebony.png" alt="Project CTD" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Ebony Beauty and Hairdressing.</h3>
+                          <p>A stylish salon website with modern designs.</p>
+                          <a href="link-to-ctd.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/events.png" alt="Project GPT" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Event Booking System</h3>
+                          <p>A wonderful site for scheduling events.</p>
+                          <a href="link-to-gpt.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/fastech.png" alt="Project HCB" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Fastech Internet Website</h3>
+                          <p>Perfect Website for ISPs.</p>
+                          <a href="link-to-hcb.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/portfolio.png" alt="Project WDS" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>John Vianny Portfolio Site</h3>
+                          <p>State of the art portfolio website.</p>
+                          <a href="link-to-wds.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33  class2">
+                    <figure class="gallery-img">
+                      <img src="Images/projects/kemsa project.png" alt="Project 6" class="sm_img" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Kemsa Inventory System</h3>
+                          <p>A very effective inventory system.</p>
+                          <a href="link-to-project6.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                    <figure class="gallery-img">
+                      <img src="Images/projects/autoassist.png" alt="Project 7" class="sm_img" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Auto Assist Ticketting System.</h3>
+                          <p>Help Desk system used at KCB Bank.</p>
+                          <a href="link-to-project7.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/project-3.jpg" alt="Project WS" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Project WS</h3>
+                          <p>The very best of Project WS</p>
+                          <a href="link-to-ws.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/skyrich.png" alt="Project WS" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Skyrich Photography</h3>
+                          <p>Modern design used no where else.</p>
+                          <a href="link-to-ws.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/sylar.png" alt="Project WS" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Skylar Insurance Website</h3>
+                          <p>Pragmatic style and themes used here.</p>
+                          <a href="link-to-ws.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="design" class="tabcontent">
+              <div class="flex">
+                <div class="flex flex-center">
+                  <div class="flex w-100">
+
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/events.png" alt="Project GPT" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Event Booking System</h3>
+                          <p>A wonderful site for scheduling events.</p>
+                          <a href="link-to-gpt.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/fastech.png" alt="Project HCB" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Fastech Internet Website</h3>
+                          <p>Perfect Website for ISPs.</p>
+                          <a href="link-to-hcb.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+
+
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/owiphotography.png" alt="Project CMS" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Owi Photography</h3>
+                          <p>An exquisite Photography Website</p>
+                          <a href="link-to-cms.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/ebony.png" alt="Project CTD" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Ebony Beauty and Hairdressing.</h3>
+                          <p>A stylish salon website with modern designs.</p>
+                          <a href="link-to-ctd.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+
+
+                  <div class="w-33 gallery-img">
+                    <figure>
+                      <img src="Images/projects/portfolio.png" alt="Project WDS" />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>John Vianny Portfolio Site</h3>
+                          <p>State of the art portfolio website.</p>
+                          <a href="link-to-wds.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="w-33  class2">
+                    <figure class="gallery-img">
+                      <img src="Images/projects/kemsa project.png" alt="Project 6"  />
+                      <div class="overlay">
+                        <div class="overlay_text">
+                          <h3>Kemsa Inventory System</h3>
+                          <p>A very effective inventory system.</p>
+                          <a href="link-to-project6.html"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+
+            <div id="development" class="tabcontent">
+              <div class="flex">
+                <div class="flex flex-center">
+                  <div class="flex w-100">
+                  
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/ebony.png" alt="Project CTD" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Ebony Beauty and Hairdressing.</h3>
+                            <p>A stylish salon website with modern designs.</p>
+                            <a href="link-to-ctd.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/events.png" alt="Project GPT" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Event Booking System</h3>
+                            <p>A wonderful site for scheduling events.</p>
+                            <a href="link-to-gpt.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/owiphotography.png" alt="Project CMS" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Owi Photography</h3>
+                            <p>An exquisite Photography Website</p>
+                            <a href="link-to-cms.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/fastech.png" alt="Project HCB" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Fastech Internet Website</h3>
+                            <p>Perfect Website for ISPs.</p>
+                            <a href="link-to-hcb.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/portfolio.png" alt="Project WDS" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>John Vianny Portfolio Site</h3>
+                            <p>State of the art portfolio website.</p>
+                            <a href="link-to-wds.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+            <div id="branding" class="tabcontent">
+              <div class="flex">
+                <div class="flex flex-center">
+                  <div class="flex w-100">
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/skyrich.png" alt="Project WS" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Skyrich Photography</h3>
+                            <p>Modern design used no where else.</p>
+                            <a href="link-to-ws.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+  
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/sylar.png" alt="Project WS" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Skylar Insurance Website</h3>
+                            <p>Pragmatic style and themes used here.</p>
+                            <a href="link-to-ws.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div id="ui_ux" class="tabcontent">
+              <div class="flex">
+                <div class="flex flex-center">
+                  <div class="flex w-100">
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/owiphotography.png" alt="Project CMS" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Owi Photography</h3>
+                            <p>An exquisite Photography Website</p>
+                            <a href="link-to-cms.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+  
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/sylar.png" alt="Project WS" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Skylar Insurance Website</h3>
+                            <p>Pragmatic style and themes used here.</p>
+                            <a href="link-to-ws.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    
+
+            <div id="seo" class="tabcontent">
+              <div class="flex">
+                <div class="flex flex-center">
+                  <div class="flex w-100">
+
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/ebony.png" alt="Project CTD" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Ebony Beauty and Hairdressing.</h3>
+                            <p>A stylish salon website with modern designs.</p>
+                            <a href="link-to-ctd.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/events.png" alt="Project GPT" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Event Booking System</h3>
+                            <p>A wonderful site for scheduling events.</p>
+                            <a href="link-to-gpt.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/fastech.png" alt="Project HCB" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>Fastech Internet Website</h3>
+                            <p>Perfect Website for ISPs.</p>
+                            <a href="link-to-hcb.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                    <div class="w-33 gallery-img">
+                      <figure>
+                        <img src="Images/projects/portfolio.png" alt="Project WDS" />
+                        <div class="overlay">
+                          <div class="overlay_text">
+                            <h3>John Vianny Portfolio Site</h3>
+                            <p>State of the art portfolio website.</p>
+                            <a href="link-to-wds.html"><i class="fa-solid fa-link"></i></a>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+            
+
+            <div class="gallery-hr flex flex-end gap-1 mt-15">
+              <h6>Creative Solutions</h6>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services section -->
+      <section class="service">
+        <div class="service-1">
+          <div class="container">
+            <div class="service-data" data-aos="fade-down">
+              <div class="w-66">
+                <div class="flex gap-1">
+                  <hr class="service_hr1" />
+                  <h5>SERVICES</h5>
+                </div>
+                <h2 class="mt-15">Services We Offer</h2>
+                <p class="mt-15">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolorum minima atque ea alias doloribus, sequi veniam voluptas
+                  ad doloribus, sequi veniam voluptas ad doloribus, sequi veniam
+                  voluptas ad.
+                </p>
+              </div>
+
+              <div class="w-33 mt-15 flex flex-end">
+                <a href="/" class="btn_hover2">View All Services</a>
+              </div>
+
+              <hr />
+            </div>
+            <div class="flex s-card gap-1">
+              <div class="service-card" data-aos="fade-down">
+                <figure>
+                  <img
+                    src="Images/icon/slider1.png"
+                    class="img1"
+                    alt="slider1"
+                  />
+                </figure>
+                <h3>UI/UX Design</h3>
+                <p>
+                  Build intuitive user experiences and  interfaces that resonate with your audience. Our design services blend creativity with usability to elevate your digital presence.
+                </p>
+                <a href="/"
+                  >Read More <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+
+              <div class="service-card" data-aos="fade-up">
+                <figure>
+                  <img
+                    src="Images/icon/slider2.png"
+                    class="img2"
+                    alt="slider2"
+                  />
+                </figure>
+                <h3>Development</h3>
+                <p>
+                  Turn your ideas into reality with our comprehensive development solutions. From robust web applications to mobile apps, we deliver solutions tailored to your business needs.
+                </p>
+                <a href="/"
+                  >Read More <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+
+              <div class="service-card" data-aos="fade-down">
+                <figure>
+                  <img
+                    src="Images/icon/slider3.png"
+                    class="img3"
+                    alt="slider3"
+                  />
+                </figure>
+                <h3>Visual Design</h3>
+                <p>
+                  Elevate your brand with designs that leave a lasting impression. Our creative approach ensures your brand identity stands out across digital platforms.
+                </p>
+                <a href="/"
+                  >Read More <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- experience section -->
+      <section class="experience">
+        <div class="container">
+          <div class="flex flex-wrap exp-center" data-aos="fade-up">
+            <div class="w-66">
+              <div class="flex gap-1">
+                <hr class="exp-hr1 m-0" />
+                <h5>Experience</h5>
+              </div>
+
+              <h2>Grow Your Online Presence</h2>
+              <p class="mt-1">
+                At CODE ARKITEKTS, we specialize in enhancing your digital presence through innovative strategies and cutting-edge technologies. Our mission is to deliver impactful solutions that propel your business forward.
+              </p>
+            </div>
+
+            <div class="w-33 mt-3 flex flex-end">
+              <a href="/" class="btn_hover">Get Started</a>
+            </div>
+            <div class="flex">
+              <div class="w-50 p-relative flex flex-center" data-aos="zoom-in">
+                <div class="experience_mask">
+                  <figure>
+                    <img src="Images/home/ex3.jpg" style="width: 518px; height: 587px; object-fit: cover;" alt="" />
+                  </figure>
+                </div>
+                <div class="experience-hr flex gap-1">
+                  <hr />
+                  <h6>Our Experience</h6>
+                </div>
+              </div>
+
+              <div class="w-50 flex flex-col gap-20 mt-1">
+                <div
+                  class="flex gap-1 ex-card"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <div class="flex flex-center">
+                    <h3>99</h3>
+                    <h3>%</h3>
+                  </div>
+
+                  <div>
+                    <h4>Creative Approach</h4>
+                    <p>
+                      Our creative approach is at the core of everything we do. We tailor unique solutions that resonate with your audience and drive engagement.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex gap-1 ex-card"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <div class="flex flex-center">
+                    <h3>85</h3>
+                    <h3>%</h3>
+                  </div>
+
+                  <div>
+                    <h4>Guaranteed Success</h4>
+                    <p>
+                      We guarantee success by leveraging our expertise and industry insights to deliver measurable results that exceed expectations.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex gap-1 ex-card"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div class="flex flex-center">
+                    <h3>90</h3>
+                    <h3>%</h3>
+                  </div>
+
+                  <div>
+                    <h4>Brand Strategy</h4>
+                    <p>
+                      Our strategic approach to branding ensures that your brand stands out in the competitive digital landscape, driving long-term growth and success.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- work -->
+      <section class="work">
+        <div class="container p-relative">
+          <div class="work-para text-center" data-aos="fade-up">
+            <h5>HOW WE WORK</h5>
+            <h2 class="mt-15">Our Process for Delivering Results</h2>
+            <p>
+              At CODE ARKITEKTS, we streamline our process to deliver exceptional results efficiently and exclusively online.
+            </p>
+          </div>
+
+          <div class="work-hr flex gap-1">
+            <hr />
+            <h6>Project in steps</h6>
+          </div>
+
+          <div class="work-line flex flex-center gap-1 flex-wrap">
+            <div data-aos="zoom-in">
+              <h2>01.</h2>
+              <h4>Discuss Project Requirements</h4>
+            </div>
+            <div data-aos="zoom-in">
+              <h2>02.</h2>
+              <h4>Design & Development</h4>
+            </div>
+            <div data-aos="zoom-in">
+              <h2>03.</h2>
+              <h4>Client Feedback & Revisions</h4>
+            </div>
+            <div data-aos="zoom-in">
+              <h2>04.</h2>
+              <h4>Final Delivery & Support</h4>
+            </div>
+          </div>
+        </div>
+
+
+          <div class="flex flex-center" data-aos="zoom-in">
+            <a href="/" class="btn_hover2">Contact Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- team section -->
+      <section class="team">
+        <div class="container">
+          <div class="flex team-center" data-aos="fade-up">
+            <div class="w-66">
+              <div class="flex gap-1">
+                <hr class="team-hr1" />
+                <h5>Our Team</h5>
+              </div>
+
+              <h2 class="mt-1">Meet Our Team Of Professionals</h2>
+              <p class="mt-1">
+                At CODE ARKITEKTS, our team of dedicated professionals brings diverse expertise and creativity to every project.
+              </p>
+            </div>
+
+            <div class="w-33 mt-15 flex flex-end">
+              <a href="/" class="btn_hover2">All Members</a>
+            </div>
+          </div>
+
+          <div
+            class="team-slider flex mt-15"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
+
+
+          
+          <div class="team-img">
+            <img src="Images/slider/moji.jpg" alt="avatar" />
+            <div class="overlay">
+              <div class="overlay_text">
+                <h3>Anni Dao</h3>
+                <h4>UI/UX</h4>
+                <div class="flex flex-center gap-1">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="team-img">
+              <img src="Images/slider/john.jpeg" alt="avatar" />
+              <div class="overlay">
+                <div class="overlay_text">
+                  <h3>John Indakwa</h3>
+                  <h4>Designer</h4>
+                  <div class="flex flex-center gap-1">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="team-img">
+              <img src="Images/slider/AGIT.jpg" alt="avatar" />
+              <div class="overlay">
+                <div class="overlay_text">
+                  <h3>David Agit</h3>
+                  <h4>SEO Expert</h4>
+                  <div class="flex flex-center gap-1">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-img">
+              <img src="Images/slider/TONY.png" alt="avatar" />
+              <div class="overlay">
+                <div class="overlay_text">
+                  <h3>Antony Ligs</h3>
+                  <h4>Developer</h4>
+                  <div class="flex flex-center gap-1">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-img">
+              <img src="Images/slider/quinter.jpg" alt="avatar" />
+              <div class="overlay">
+                <div class="overlay_text">
+                  <h3>John Indakwa</h3>
+                  <h4>Designer</h4>
+                  <div class="flex flex-center gap-1">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-img">
+              <img src="Images/slider/AGIT.jpg" alt="avatar" />
+              <div class="overlay">
+                <div class="overlay_text">
+                  <h3>David Agit</h3>
+                  <h4>UI/UX</h4>
+                  <div class="flex flex-center gap-1">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-btn" data-aos="zoom-in">
+            <div class="container flex flex-sb gap-2 flex wrap">
+              <h4>
+                Ask a Question To Our Amazing team and Get Quick Responses
+              </h4>
+              <a href="/" class="btn_hover2">Contact Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing p-relative">
+        <span></span>
+        <div class="pricing-hr flex gap-1 mt-2">
+          <hr />
+          <h6>Pricing Plans</h6>
+        </div>
+
+        <div class="container">
+          <div class="text-center" data-aos="fade-down">
+            <h5>PRICING</h5>
+            <h2 class="mt-1">Pricing Plans</h2>
+            <p>
+              Choose a plan that fits your needs and budget. We offer flexible options to help you achieve your goals.
+            </p>
+          </div>
+
+          <div class="pricing-card flex gap-1 mt-3 text-center">
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+              <h3>BASIC</h3>
+              <h2>Kshs.9,999</h2>
+              <h6>Fully Responsive Design</h6>
+              <h6>Basic SEO Optimization</h6>
+              <h6>Simple and Clean UI</h6>
+              <h6>Social Media Integration</h6>
+              <a href="/" class="btn_hover">GET Started</a>
+            </div>
+
+            <div class="flex flex-col gap-2" data-aos="fade-down">
+              <h3>STANDARD</h3>
+              <h2>Kshs.19,999</h2>
+              <h6>Fully Responsive Design</h6>
+              <h6>Advacnced SEO Optimization</h6>
+              <h6>Enhanced UI and Security</h6>
+              <h6>Social Media Integration</h6>
+              <a href="/" class="btn_hover">GET Started</a>
+            </div>
+
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+              <h3>ENTERPRISE</h3>
+              <h2>Kshs.29,999</h2>
+              <h6>Comprehensive SEO Strategy</h6>
+              <h6>Basic SEO Optimization</h6>
+              <h6>Ecommerce Integration</h6>
+              <h6>Payment Gateway Integration</h6>
+              <h6></h6>
+              <a href="/" class="btn_hover">GET Started</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECECTION -->
+
+      <section class="faq p-relative">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <div class="w-50 text-center" data-aos="fade-up">
+              <div class="flex gap-1">
+                <hr class="faq-hr1" />
+                <h5>FAQ</h5>
+              </div>
+              <h2 class="mt-1">Frequently Asked Questions</h2>
+              <p class="mt-1">
+                Got questions? We've got answers. Here are some common inquiries about our services.
+              </p>
+            </div>
+
+            <div class="w-50 mt-15">
+              <div class="accordion flex flex-col gap-2" id="accordionExample" data-aos="fade-down">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button flex-sb">
+                      WHAT KIND OF DIGITAL SERVICES DO YOU OFFER?
+                      <img src="Images/icon/plus.png" alt="icon" />
+                    </button>
+                  </h2>
+      
+                  <div class="accordion-collapse">
+                    <p>
+                      We offer a range of digital services including web design, mobile app development, digital marketing, and more. Our goal is to help businesses succeed online through tailored solutions.
+                    </p>
+                  </div>
+                </div>
+      
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button flex-sb">
+                      WHAT IS YOUR PROCESS FOR WORKING WITH CLIENTS?
+                      <img src="Images/icon/plus.png" alt="icon" />
+                    </button>
+                  </h2>
+      
+                  <div class="accordion-collapse">
+                    <p>
+                      Our process starts with understanding your goals and requirements. We then propose a customized strategy, followed by design and development phases. Regular feedback and testing ensure we deliver results that exceed expectations.
+                    </p>
+                  </div>
+                </div>
+      
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button flex-sb">
+                      WHAT IS YOUR TIMELINE FOR COMPLETING YOUR PROJECTS?
+                      <img src="Images/icon/plus.png" alt="icon" />
+                    </button>
+                  </h2>
+      
+                  <div class="accordion-collapse">
+                    <p>
+                      Project timelines vary based on complexity and scope. Typically, we provide an estimated timeline during the initial consultation phase and strive to deliver projects efficiently without compromising quality.
+                    </p>
+                  </div>
+                </div>
+      
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button flex-sb">
+                      HOW DO I CONTACT YOUR SUPPORT TEAM?
+                      <img src="Images/icon/plus.png" alt="icon" />
+                    </button>
+                  </h2>
+      
+                  <div class="accordion-collapse">
+                    <p>
+                      You can contact our support team via email at support@yourcompany.com or by phone during business hours. We are committed to providing prompt assistance and resolving any queries or issues you may have.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button flex-sb">
+                        WHAT KIND OF DIGITAL SERVICES DO YOU OFFER?
+                        <img src="Images/icon/plus.png" alt="icon">
+                      </button>
+                    </h2>
+
+                    <div class="accordion-collapse">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias fugiat magnam libero, maxime eligendi nulla dolores inventore in blanditiis autem ab?</p>
+                      
+                    </div>
+                  </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blogs Section -->
+
+      <section class="blog">
+        <div class="container">
+          <div class="flex blog-center" data-aos="fade-down">
+            <div class="w-66">
+
+              <div class="flex gap-1">
+                <hr class="blog-hr1" />
+                <h5>BLOGS</h5>
+              </div>
+
+              <h2 class="mt-1">Latest Posts</h2>
+              <p class="mt-1 mb-15">
+                Stay updated with our latest insights and news. Discover our thoughts on industry trends, tips for improving your online presence, and more.
+              </p>
+            </div>
+
+            <div class="w-33 mt-1 flex flex-end">
+              <a href="/" class="btn_hover2">See All Blogs</a>
+            </div>
+          </div>
+
+          <div class="flex gap-1 mt-15 blog-cards" data-aos="fade-up">
+            <div class="blog-card w-100">
+              <img src="Images/home/tech.png" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h4>10 must know Digital Marketing Trends in 2024</h4>
+                <a href="/">Learn More</a>
+              </div>
+            </div>
+
+            <div class="blog-card w-100" data-aos="fade-down">
+              <img src="Images/home/font.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h4>
+                  The importance of Responsive web Design for your business.
+                </h4>
+                <a href="/">Learn More</a>
+              </div>
+            </div>
+
+            <div class="blog-card w-100" data-aos="fade-up">
+              <img src="Images/home/jkuat.jpg" alt="" class="card-img-top" />
+              <div class="card-body">
+                <h4>How To create a successful social media Strategy</h4>
+                <a href="/">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+<!-- 
+    <footer>
+      <div class="container">
+        <div class="footer-hr flex flex-col">
+          <div class="flex gap-1" data-aos="fade-left">
+            <hr />
+            <h6>Newsletter</h6>
+          </div>
+
+          <h3>JOIN OUR MAILING LIST</h3>
+          <p class="text-center">
+            Stay updated with our latest news, offers, and insights by subscribing to our newsletter. Be the first to know about new services, special promotions, and more.
+          </p>
+        </div>
+
+        <form
+          action="#"
+          id="footer-form"
+          class="flex flex-sb gap-2"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
+          <div id="footer-message"></div>
+          <input type="text" required placeholder="Enter your mail" />
+          <button class="btn_hover" type="submit">Get Started</button>
+        </form>
+      </div>
+
+      <div class="footer-menu">
+        <div class="container">
+          <div class="flex flex-start footer-center">
+            <div class="w-33 flex flex-col gap-2 flex-start">
+              <a href="/"><img src="Images/CA-logo.png" alt="footer logo" /></a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                fugiat perspiciatis veritatis quia tempore sint nesciunt quos
+                amet.
+              </p>
+              <span class="flex gap-20">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </span>
+            </div>
+
+            <div class="footer-tricky">
+              <div class="w-16 mt-1">
+                <h4>Quick Links</h4>
+                <ul class="flex flex-col gap-20 flex-start">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Blogs</a></li>
+                </ul>
+              </div>
+  
+              <div class="w-16 mt-45 flex-end">
+                <ul class="flex flex-col gap-2 flex-start">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-66 mt-1 flex flex-col">
+              <h4>Get Started</h4>
+              <ul class="flex flex-col gap-2">
+                <li>
+                  <a href="#"><i class="fa-solid fa-phone"></i></a>
+                  <a href="#" class="text-lowercase">codearkitekts@gmail.com</a>
+                </li>
+
+                <li>
+                  <a href="#"><i class="fa-regular fa-phone"></i></a>
+                  <a href="#">+2547 02207999</a>
+                </li>
+
+                <li>
+                  <a href="#"><i class="fa-sharp fa-regular fa-clock"></i></a>
+                  <a href="#"
+                    >Working Hours : 8am - 11pm Sunday to Week Days
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <div class="container flex flex-sb gap-20 flex-wrap">
+          <h6>
+            Copyright &copy; 2024 Code Arkitekts By
+            <a href="https://bit.ly/johnindakwa" target="_blank" class="p-0" style="color: blueviolet;">Dev John</a>
+          </h6>
+          <h5 class="h5">Powered By <b>Dev John</b></h5>
+        </div>
+      </div>
+    </footer> -->
+
+
+
+
+
+
+    <footer class="footer-section">
+
+      <div class="footer-newsletter">
+        <div class="footer-hr flex flex-col">
+          <div class="flex gap-1" data-aos="fade-left">
+            <hr />
+            <h6>Newsletter</h6>
+          </div>
+  
+          <h3>JOIN OUR MAILING LIST</h3>
+          <p class="text-center">
+            Stay updated with our latest news, offers, and insights by subscribing to our newsletter. Be the first to know about new services, special promotions, and more.
+          </p>
+        </div>
+  
+        <form
+          action="#"
+          id="footer-form"
+          class="flex flex-sb gap-2"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
+          <div id="footer-message"></div>
+          <input type="text" required placeholder="Enter your mail" />
+          <button class="btn_hover" type="submit">Get Started</button>
+        </form>
+      </div>
+
+      <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="cta-text">
+                  <h4>Find us</h4>
+                  <span>@codearkitekts</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-phone"></i>
+                <div class="cta-text">
+                  <h4>Call us</h4>
+                  <span>+918329450916</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="far fa-envelope-open"></i>
+                <div class="cta-text">
+                  <h4>Mail us</h4>
+                  <span>codearkitekts@gmail</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="index.html"
+                    ><img
+                      src="Images/CA-logo.png"
+                      class="img-fluid"
+                      alt="logo"
+                  /></a>
+                </div>
+                <div class="footer-text">
+                  <p>
+                    This is my CODE ARKITEKTS, where innovation meets expertise.
+                    We specialize in software development, web design,
+                    cybersecurity, and more. Our mission is simple: to empower
+                    your digital success. Explore our services and join us on
+                    the path to digital excellence."
+                  </p>
+                </div>
+                <div class="footer-social-icon">
+                  <span>Follow us</span>
+                  <a href="https://github.com/codearkitekts"
+                    ><i class="fab fa-github google-bg"></i
+                  ></a>
+
+                  <a href="https://www.linkedin.com/company/codearkitekts"
+                    ><i class="fab fa-linkedin google-bg"></i
+                  ></a>
+                  <a href="https://www.instagram.com/codearkitekts"
+                    ><i class="fab fa-instagram google-bg"></i
+                  ></a>
+                  <a href="https://www.facebook.com/codearkitekts"
+                    ><i class="fab fa-facebook-f google-bg"></i
+                  ></a>
+                  <a href="https://youtube.com/@codearkitekts"
+                    ><i class="fab fa-youtube google-bg"></i
+                  ></a>
+                  <!--  <a href="#"><i class="fab fa-whatsapp google-bg"></i></a> -->
+                  <a href="https://twitter.com/AshutoshPalhare"
+                    ><i class="fab fa-twitter google-bg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">services</a></li>
+                  <li><a href="#">portfolio</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Our Services</a></li>
+                  <li><a href="#">Expert Team</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Latest News</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Subscribe</h3>
+                </div>
+                <div class="footer-text mb-25">
+                  <p>
+                    Don’t miss to subscribe to our new feeds, kindly fill the
+                    form below.
+                  </p>
+                </div>
+                <div class="subscribe-form">
+                  <form action="#">
+                    <input type="text" placeholder="Email Address" />
+                    <button><i class="fab fa-telegram-plane"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+              <div class="copyright-text">
+                <p>
+                  Copyright &copy; 2023, All Right Reserved
+                  <a target="_blank" href="https://johnindakwa.github.io/Personal-Portfolio/">By JI</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+              <div class="footer-menu">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Policy</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- button back to top -->
+    <button onclick="scrollToTop() " id="backToTopBtn" class="btn_hover2">
+      <i class="fa-solid fa-arrow-turn-up"></i>
+    </button>
+
+    <!-- Scroll animation lib -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 150,
+        duration: 1250,
+        once: true,
+      });
+    </script>
+
+    <!-- jquery js cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- jquery min js cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- slick carousel min js cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

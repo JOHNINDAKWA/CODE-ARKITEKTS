@@ -111,7 +111,7 @@ $(".sliderlogo").slick({
   dots: false,
   infinite: false,
   autoplay: true,
-  speed: 300,
+  speed: 100,
   slidesToShow: 5,
   sliderToScroll: 2,
   responsive: [
@@ -145,7 +145,7 @@ $(".team-slider").slick({
   dots: true,
   infinite: false,
   autoplay: true,
-  speed: 300,
+  speed: 100,
   slidesToShow: 4,
   sliderToScroll: 1,
   responsive: [

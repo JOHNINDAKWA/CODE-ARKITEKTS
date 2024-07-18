@@ -258,7 +258,7 @@ a {
 }
 
 .header-index {
-  background-image: url("/Images/bg/blue7.jpg");
+  background-image: url("../Images/bg/blue7.jpg");
   background-size: cover;
   background-position: top;
 
@@ -1597,7 +1597,7 @@ aside .pages {
 }
 
 .work-line {
-  background-image: url("/Images/bg/work-line.png");
+  background-image: url("../Images/bg/work-line.png");
   background-size: 100% 100%;
   background-position: center center;
   min-height: 242px;

@@ -518,35 +518,65 @@ aside .pages {
 }
 
 .collapse-btn {
+  position: relative; /* Ensure dropdown is positioned relative to this parent */
+}
+
+.collapse-btn .plus_collapse {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+  align-items: center;
+  gap: 8px;
 }
 
 .collapse-btn i {
   border: 1px solid #d3c9c1;
   padding: 7px 8px;
   border-radius: 40px;
+  transition: border 0.3s ease;
 }
 
 .collapse-btn i:hover {
   border: 1px solid #f57c48;
 }
-.plus_collapse {
-  margin: -52px 0 0 0;
-  height: 45px;
-}
 
 #pages {
+  position: absolute;
+  top: 100%; 
+  right: 3.5rem;
+  background: linear-gradient(42deg, #080541 0.01%, #033765 100%);
+  color: #ffffff; 
+  width: max-content; 
+  border: 1px solid #000e4168; 
+  border-radius: 5px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  padding: 20px; 
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease;
+  z-index: 1; 
 }
 
 .show {
-  height: 500px !important;
+  height: auto !important;
   transition: height 0.3s ease;
 }
+
+#pages ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#pages li {
+  margin: 5px 0;
+}
+
+.collapse-btn:hover #pages,
+.collapse-btn:focus #pages,
+.collapse-btn:focus-within #pages {
+  height: auto;
+}
+
+
 
 /* searchbar */
 #search-bar {

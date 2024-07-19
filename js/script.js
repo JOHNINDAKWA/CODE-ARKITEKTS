@@ -1,4 +1,19 @@
+
+// PRELOADING
+
+const loadingElement = document.querySelector("[data-loading]");
+
+window.addEventListener("load", function () {
+  loadingElement.classList.add("loaded");
+  document.body.classList.remove("active");
+});
+
+
+
+
 // side bar start
+
+
 
 function openNav() {
   "use strict";
@@ -81,6 +96,7 @@ function outsideClickListener(event) {
 }
 
 
+
 // to handle the click event on the "More" link and the plus button
 document.getElementById('more-link').addEventListener('click', function(event) {
   event.preventDefault();
@@ -91,6 +107,7 @@ document.getElementById('more-link').addEventListener('click', function(event) {
     pages.classList.add('show');
   }
 });
+
 
 
 

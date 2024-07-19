@@ -336,7 +336,6 @@ header {
 .dropdown-toggle::after {
   content: "+";
   vertical-align: center;
-  margin-left: 5px;
 }
 
 .dropdown-menu {
@@ -448,7 +447,8 @@ header {
 
 /* sidebar */
 #mysidepanel {
-  background-color: #3d0541;
+  background-color: #080541;
+  
   z-index: 10;
   position: fixed;
   width: 320px;
@@ -516,7 +516,6 @@ aside .pages {
   color: #d3c9c1;
   margin: 11px 0 7px 0;
 }
-
 .collapse-btn {
   position: relative; /* Ensure dropdown is positioned relative to this parent */
 }
@@ -575,6 +574,8 @@ aside .pages {
 .collapse-btn:focus-within #pages {
   height: auto;
 }
+
+
 
 
 
@@ -2668,6 +2669,10 @@ footer form button:hover {
   .subscribe-form {
     width: 80%;
   }
+  
+.footer-section {
+  display: none;
+}
 }
 
 @media screen and (max-width: 500px) {
@@ -3160,7 +3165,6 @@ footer form button:hover {
     width: 90%;
   }
 }
-
 
 
 

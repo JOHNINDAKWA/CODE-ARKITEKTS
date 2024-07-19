@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="Images/fave_icon.png" type="image/x-icon" />
+
+    <!-- Scroll cdn  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      integrity="sha256-KsG44mN2Hn8FOu4skM5GyCU7uE3R6DEj8+r7Jd1YPuA="
+      crossorigin="anonymous"
+    />
+
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous"
+  />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/easy.css" />
+    <link rel="stylesheet" href="css/slick.min.css" />
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CODE ARKITEKTS</title>
+  </head>
+  <body>
+
+      <!-- 
+    -#PRELOADING
+  -->
+
+  <div class="loading" data-loading>
+    <img src="Images/fave_icon.png" width="55" height="55" alt="loading" class="img">
+    <img src="Images/icon/loading-circle.svg" width="70" height="70" alt="" class="circle">
+  </div>
+
+
+
+
+
+    <div class="site-wrapper">
+      <div class="header-index" style="background: #070725;">
+        <!-- header section -->
+        <header style="background: #070725;">
+          <nav class="container navbar">
+            <div class="container-nav flex">
+              <a href="index.html" class="navbar-logo">
+                <img src="Images/CA-logo.png" alt="" />
+              </a>
+              <button onclick="openNav()" class="navbar-toggler" type="button">
+                <span><i class="fa-solid fa-bars"></i></span>
+              </button>
+
+              <ul class="navbar-nav-1">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="dropdown">
+                  <a  class="nav-link">More <i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#service" class="dropdown-item1">Services</a></li>
+                    <li><a href="#pricing" class="dropdown-item1">Pricing Plan</a></li>
+                    <li><a href="#gallery" class="dropdown-item1">Portfolio</a></li>
+                    <li><a href="#team" class="dropdown-item1">Team</a></li>
+                    <li><a href="#blog" class="dropdown-item1">Blog</a></li>
+                    <li><a href="#faq" class="dropdown-item1">FAQ</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav-right flex">
+              <p>Call Us <span>+2547 02207999</span></p>
+
+              <!-- header buttons -->
+              <i
+                onclick="open_search()"
+                class="fa-solid fa-magnifying-glass"
+              ></i>
+              <i onclick="toggleRight()" class="fa-solid fa-bars"></i>
+            </div>
+          </nav>
+
+          <!-- sidebar -->
+          <aside id="mysidepanel" class="sidepanel">
+            <div class="sidebar flex">
+              <a href="index.html">
+                <img src="Images/CA-logo.png" alt="" />
+              </a>
+              <button
+                onclick="closeNav()"
+                type="button"
+                class="closebtn btn_hover"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div>
+              <!-- side menus -->
+              <ul>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="collapse-btn">
+                  <a  class="nav-link plus_collapse" data-bs-toggle="collapse" id="more-link">
+                    More <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <div class="collapse" id="pages">
+                    <ul>
+                      <li><a href="#service" class="nav-link">Services</a></li>
+                      <li><a href="#pricing" class="nav-link">Pricing Plan</a></li>
+                      <li><a href="#gallery" class="nav-link">Portfolio</a></li>
+                      <li><a href="#team" class="nav-link">Team</a></li>
+                      <li><a href="#team" class="nav-link">FAQ</a></li>
+                      <li><a href="#blog" class="nav-link">Blog</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              
+              
+            </div>
+          </aside>
+
+          <!-- searchbar -->
+          <div id="search-bar">
+            <div onclick="close_search()" class="btn_hover">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <form action="#" method="search">
+              <input type="search" required placeholder="Search..." />
+              <button class="btn_hover" type="submit">Search</button>
+            </form>
+          </div>
+
+          <section class="header-right-sidebar" id="right-side">
+            <div class="flex flex-sb">
+              <a href="/">
+                <img src="Images/CA-logo.png" alt="logo" />
+              </a>
+              <button
+                onclick="closeRight()"
+                class="close-rightsidebar fa-solid fa-xmark"
+              ></button>
+            </div>
+
+            <p class="text-center">
+              We create amazing websites and apps that people adore. Our team of experts designs and builds digital products that help your business succeed. Let's work together to make your online dreams a reality.
+            </p>
+
+            <a href="/" class="btn_hover">Discover More</a>
+            <hr />
+            <h4>Connected Details</h4>
+            <ul>
+              <li class="flex">
+                <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                <a href="#">codearkitekts@gmail.com</a>
+              </li>
+              <li class="flex">
+                <a href="#"> <i class="fa-solid fa-envelope"></i></a>
+                <a href="#">+254702207999</a>
+              </li>
+              <li class="flex">
+                <a href="#"> <i class="fa-solid fa-regular fa-clock"></i></a>
+                <a href="#">Working Hours: 8AM - 11PM <br> Sunday - Weekend Day</a>
+              </li>
+
+              <li class="flex">
+                <a href="#"> <i class="fa-solid fa-house"></i></a>
+                <a href="#">Nairobi, Kenya</a>
+              </li>
+            </ul>
+
+            <span class="flex flex-center">
+              <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+              <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+              <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+              <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+            </span>
+          </section>
+        </header>
+
+        <!-- ========Contact=========== -->
+
+        <div class="contact">
+          <div class="container contact-container" >
+
+            <div class="contact-content" data-aos="fade-right">
+              <h2 class="h2 contact-title">Let’s Amplify Your Brand's Potential Together</h2>
+  
+              <figure class="contact-banner">
+                <img src="Images/home/contact.png" alt="contact banner">
+              </figure>
+            </div>
+
+
+            
+          <form action="" class="contact-form" data-aos="fade-left">
+
+            <div class="input-wrapper">
+              <label for="name" class="input-label">Name *</label>
+
+              <input type="text" name="name" id="name" required placeholder="John Doe" class="input-field">
+            </div>
+
+            <div class="inpu t-wrapper">
+              <label for="phone" class="input-label">Phone</label>
+
+              <input type="tel" name="phone" id="phone" placeholder="e.g., 0702207999" class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="email" class="input-label">Email Address *</label>
+
+              <input type="email" name="email" id="email" required placeholder="Email@gmail.com" class="input-field">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="message" class="input-label">How can we help? *</label>
+
+              <textarea name="message" id="message" placeholder="How soon can you start a new projects?" required
+                class="input-field"></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn">Send Message</button>
+
+          </form>
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+    <footer class="footer-section" style=" padding: 80px 0 0 0;">
+
+      <div class="footer-newsletter">
+        <div class="footer-hr flex flex-col">
+          <div class="flex gap-1" data-aos="fade-left">
+            <hr />
+            <h6>Newsletter</h6>
+          </div>
+  
+          <h3>JOIN OUR MAILING LIST</h3>
+          <p class="text-center">
+            Stay updated with our latest news, offers, and insights by subscribing to our newsletter. Be the first to know about new services, special promotions, and more.
+          </p>
+        </div>
+  
+        <form
+          action="#"
+          id="footer-form"
+          class="flex flex-sb gap-2"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
+          <div id="footer-message"></div>
+          <input type="text" required placeholder="Enter your mail" />
+          <button class="btn_hover" type="submit">Get Started</button>
+        </form>
+      </div>
+
+      <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="cta-text">
+                  <h4>Find us</h4>
+                  <span>@codearkitekts</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="fas fa-phone"></i>
+                <div class="cta-text">
+                  <h4>Call us</h4>
+                  <span>+918329450916</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+              <div class="single-cta">
+                <i class="far fa-envelope-open"></i>
+                <div class="cta-text">
+                  <h4>Mail us</h4>
+                  <span>codearkitekts@gmail</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="index.html"
+                    ><img
+                      src="Images/CA-logo.png"
+                      class="img-fluid"
+                      alt="logo"
+                  /></a>
+                </div>
+                <div class="footer-text">
+                  <p>
+                    This is my CODE ARKITEKTS, where innovation meets expertise.
+                    We specialize in software development, web design,
+                    cybersecurity, and more. Our mission is simple: to empower
+                    your digital success. Explore our services and join us on
+                    the path to digital excellence."
+                  </p>
+                </div>
+                <div class="footer-social-icon">
+                  <span>Follow us</span>
+                  <a href="https://github.com/codearkitekts"
+                    ><i class="fab fa-github google-bg"></i
+                  ></a>
+
+                  <a href="https://www.linkedin.com/company/codearkitekts"
+                    ><i class="fab fa-linkedin google-bg"></i
+                  ></a>
+                  <a href="https://www.instagram.com/codearkitekts"
+                    ><i class="fab fa-instagram google-bg"></i
+                  ></a>
+                  <a href="https://www.facebook.com/codearkitekts"
+                    ><i class="fab fa-facebook-f google-bg"></i
+                  ></a>
+                  <a href="https://youtube.com/@codearkitekts"
+                    ><i class="fab fa-youtube google-bg"></i
+                  ></a>
+                  <!--  <a href="#"><i class="fab fa-whatsapp google-bg"></i></a> -->
+                  <a href="https://twitter.com/AshutoshPalhare"
+                    ><i class="fab fa-twitter google-bg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Useful Links</h3>
+                </div>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">services</a></li>
+                  <li><a href="#">portfolio</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Our Services</a></li>
+                  <li><a href="#">Expert Team</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Latest News</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Subscribe</h3>
+                </div>
+                <div class="footer-text mb-25">
+                  <p>
+                    Don’t miss to subscribe to our new feeds, kindly fill the
+                    form below.
+                  </p>
+                </div>
+                <div class="subscribe-form">
+                  <form action="#">
+                    <input type="text" placeholder="Email Address" />
+                    <button><i class="fab fa-telegram-plane"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+              <div class="copyright-text">
+                <p>
+                  Copyright &copy; 2023, All Right Reserved
+                  <a target="_blank" href="https://johnindakwa.github.io/Personal-Portfolio/">By JI</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+              <div class="footer-menu">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Policy</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- button back to top -->
+    <button onclick="scrollToTop() " id="backToTopBtn" class="btn_hover2">
+      <i class="fa-solid fa-arrow-turn-up"></i>
+    </button>
+
+
+    <!-- Scroll animation lib -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 150,
+        duration: 1250,
+        once: true,
+      });
+    </script>
+
+    <!-- jquery js cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- jquery min js cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- slick carousel min js cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

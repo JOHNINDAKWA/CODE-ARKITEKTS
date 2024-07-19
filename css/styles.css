@@ -365,7 +365,7 @@ header {
 
 .nav-link {
   font-weight: 400;
-  color: #d3c9c1;
+  color: #d3c9c1 !important;
 }
 
 .navbar-nav-1 li a.active,
@@ -2364,16 +2364,17 @@ footer form button:hover {
 }
 .subscribe-form button {
     position: absolute;
-    right: 0;
+    right: 50px;
     background: #4D0AD4;
     padding: 13px 20px;
     border: 1px solid #4D0AD4;
+    border-radius: 50px;
     top: 0;
 }
 .subscribe-form button i {
   color: #fff;
   font-size: 22px;
-  transform: rotate(-6deg);
+    transform: rotate(-6deg);
 }
 .copyright-area{
   background: #150738 !important;
@@ -2397,10 +2398,6 @@ footer form button:hover {
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
-}
-
-.subscribe-form button {
-  border-radius: 10px;
 }
 
 /* back to top btn */
@@ -2431,6 +2428,187 @@ footer form button:hover {
     background: linear-gradient(42deg, #4736bb 0.01%, #428bca 100%);
   border-radius: 5px;
 }
+
+
+
+
+
+
+.contact {
+  background: #070725;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.contact-container {
+  display: flex;
+}
+
+.contact-content {
+  width: 50%;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-banner {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.contact-form {
+  width: 50%;
+  padding: 40px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.input-wrapper {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px;
+  border: 1px dotted #f57c486b;
+  border-radius: 5px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+}
+
+.input-field:focus {
+  border-color: #ff6f61;
+  outline: none;
+}
+
+.contact-btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1.5px solid #2b78ec;
+  padding: 10px 20px;
+  color: #fff;
+  z-index: 1;
+  letter-spacing: 0.8px;
+  background: linear-gradient(180deg, #ff7527, #fabf28 100%);
+}
+
+.contact-btn:before {
+  border-radius: 50px;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in;
+  background: linear-gradient(
+      11deg,
+      #7436bb 0%,
+      #428bca 33%,
+      #29628b 66%,
+      #1a1aa3 100%
+    );
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+
+.contact-btn:hover::before {
+  width: 0;
+  background: linear-gradient(
+      11deg,
+      #7436bb 0%,
+      #428bca 33%,
+      #29628b 66%,
+      #1a1aa3 100%
+    );
+}
+
+.contact-content:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact-banner img:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .contact-banner {
+    margin-top: 20px;
+    max-width: 150px;
+    margin: 0 0 0 0;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 10px 10px !important;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 1.5em;
+  }
+
+  .contact-banner {
+    max-width: 100px;
+  }
+
+  .contact-form {
+    padding: 10px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+
 
 @media screen and (max-width: 768px) {
   /* global style */
@@ -2711,6 +2889,12 @@ footer form button:hover {
   .subscribe-form {
     width: 80%;
   }
+
+
+
+
+
+
   
 
 }
@@ -2849,7 +3033,11 @@ footer form button:hover {
   .team-img {
     min-width: 277px;
   }
+
+ 
 }
+
+
 
 @media screen and (max-width: 1200px) {
   .container {

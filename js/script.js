@@ -81,6 +81,18 @@ function outsideClickListener(event) {
 }
 
 
+// to handle the click event on the "More" link and the plus button
+document.getElementById('more-link').addEventListener('click', function(event) {
+  event.preventDefault();
+  var pages = document.getElementById('pages');
+  if (pages.classList.contains('show')) {
+    pages.classList.remove('show');
+  } else {
+    pages.classList.add('show');
+  }
+});
+
+
 
 //portfolio gallery tab
 

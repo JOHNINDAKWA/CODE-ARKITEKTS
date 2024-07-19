@@ -10,12 +10,12 @@
     <!-- Scroll cdn  -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<!--     <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
       integrity="sha256-KsG44mN2Hn8FOu4skM5GyCU7uE3R6DEj8+r7Jd1YPuA="
       crossorigin="anonymous"
-    /> -->
+    />
 
     <link
     rel="stylesheet"
@@ -61,17 +61,14 @@
                 <li><a href="/" class="nav-link">About</a></li>
                 <li><a href="/" class="nav-link">Contact</a></li>
                 <li class="dropdown">
-                  <a href="/" class="nav-link">Pages</a>
+                  <a href="" class="nav-link">More <i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="/" class="dropdown-item">Services</a></li>
-                    <li><a href="/" class="dropdown-item">Pricing Plan</a></li>
-                    <li><a href="/" class="dropdown-item">Portfolio</a></li>
-                    <li><a href="/" class="dropdown-item">Team</a></li>
-                    <li><a href="/" class="dropdown-item">Testimonials</a></li>
-                    <li><a href="/" class="dropdown-item">Blog</a></li>
-                    <li><a href="/" class="dropdown-item">FAQ</a></li>
-                    <li><a href="/" class="dropdown-item">Coming Soon</a></li>
-                    <li><a href="/" class="dropdown-item">404</a></li>
+                    <li><a href="#service" class="dropdown-item1">Services</a></li>
+                    <li><a href="#pricing" class="dropdown-item1">Pricing Plan</a></li>
+                    <li><a href="#gallery" class="dropdown-item1">Portfolio</a></li>
+                    <li><a href="#team" class="dropdown-item1">Team</a></li>
+                    <li><a href="#blog" class="dropdown-item1">Blog</a></li>
+                    <li><a href="#faq" class="dropdown-item1">FAQ</a></li>
                   </ul>
                 </li>
               </ul>
@@ -106,7 +103,6 @@
 
             <div>
               <!-- side menus -->
-              <!-- side menus -->
               <ul>
                 <li><a href="/" class="nav-link active">Home</a></li>
                 <li><a href="/" class="nav-link">About</a></li>
@@ -117,12 +113,12 @@
                   </a>
                   <div class="collapse" id="pages">
                     <ul>
-                      <li><a href="#service" class="nav-link">Services</a></li>
-                      <li><a href="#pricing" class="nav-link">Pricing Plan</a></li>
-                      <li><a href="#gallery" class="nav-link">Portfolio</a></li>
-                      <li><a href="#team" class="nav-link">Team</a></li>
-                      <li><a href="#faq" class="nav-link">FAQ</a></li>
-                      <li><a href="#blog" class="nav-link">Blog</a></li>
+                      <li><a href="/" class="nav-link">Services</a></li>
+                      <li><a href="/" class="nav-link">Pricing Plan</a></li>
+                      <li><a href="/" class="nav-link">Portfolio</a></li>
+                      <li><a href="/" class="nav-link">Team</a></li>
+                      <li><a href="/" class="nav-link">FAQ</a></li>
+                      <li><a href="/" class="nav-link">Blog</a></li>
                     </ul>
                   </div>
                 </li>
@@ -131,7 +127,6 @@
               
             </div>
           </aside>
-
 
           <!-- searchbar -->
           <div id="search-bar">
@@ -330,7 +325,7 @@
       </div>
 
       <!-- About us section -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about-data flex-sb">
             <div class="w-50" data-aos="fade-up">
@@ -386,7 +381,7 @@
       </section>
 
       <!-- gallery section -->
-      <div class="portfolio">
+      <div class="portfolio" id="gallery">
         <div class="portfolio-1">
           <div class="container">
             <div class="porto-center" data-aos="fade-up">
@@ -873,7 +868,7 @@
       </div>
 
       <!-- Services section -->
-      <section class="service">
+      <section class="service" id="service">
         <div class="service-1">
           <div class="container">
             <div class="service-data" data-aos="fade-down">
@@ -955,7 +950,7 @@
       </section>
 
       <!-- experience section -->
-      <section class="experience">
+      <section class="experience" id="experience">
         <div class="container">
           <div class="flex flex-wrap exp-center" data-aos="fade-up">
             <div class="w-66">
@@ -1047,7 +1042,7 @@
       </section>
 
       <!-- work -->
-      <section class="work">
+      <section class="work" id="work">
         <div class="container p-relative">
           <div class="work-para text-center" data-aos="fade-up">
             <h5>HOW WE WORK</h5>
@@ -1090,7 +1085,7 @@
       </section>
 
       <!-- team section -->
-      <section class="team">
+      <section class="team" id="team">
         <div class="container">
           <div class="flex team-center" data-aos="fade-up">
             <div class="w-66">
@@ -1180,7 +1175,35 @@
               </div>
             </div>
 
+            <div class="team-img">
+              <img src="Images/slider/quinter.jpg" alt="avatar" />
+              <div class="overlay">
+                <div class="overlay_text">
+                  <h3>John Indakwa</h3>
+                  <h4>Designer</h4>
+                  <div class="flex flex-center gap-1">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <div class="team-img">
+              <img src="Images/slider/AGIT.jpg" alt="avatar" />
+              <div class="overlay">
+                <div class="overlay_text">
+                  <h3>David Agit</h3>
+                  <h4>UI/UX</h4>
+                  <div class="flex flex-center gap-1">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="team-btn" data-aos="zoom-in">
@@ -1194,7 +1217,7 @@
         </div>
       </section>
 
-      <section class="pricing p-relative">
+      <section class="pricing p-relative" id="pricing">
         <span></span>
         <div class="pricing-hr flex gap-1 mt-2">
           <hr />
@@ -1247,7 +1270,7 @@
 
       <!-- FAQ SECECTION -->
 
-      <section class="faq p-relative">
+      <section class="faq p-relative" id="faq">
         <div class="container">
           <div class="flex flex-wrap">
             <div class="w-50 text-center" data-aos="fade-up">
@@ -1344,7 +1367,7 @@
 
       <!-- Blogs Section -->
 
-      <section class="blog">
+      <section class="blog" id="blog">
         <div class="container">
           <div class="flex blog-center" data-aos="fade-down">
             <div class="w-66">

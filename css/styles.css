@@ -2670,9 +2670,7 @@ footer form button:hover {
     width: 80%;
   }
   
-.footer-section {
-  display: none;
-}
+
 }
 
 @media screen and (max-width: 500px) {
@@ -2950,9 +2948,12 @@ footer form button:hover {
     width: 100%;
   }
 
+  .about-imgs{    
+    margin-top: 1rem;
+  }
     .about-data img{
-      width: 418px !important;
-      height: 411px !important;
+      width: 350px !important;
+      height: 340px !important;
       object-fit: cover !important;
     }
 

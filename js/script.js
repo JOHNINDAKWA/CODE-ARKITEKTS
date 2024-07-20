@@ -3,9 +3,14 @@
 
 const loadingElement = document.querySelector("[data-loading]");
 
-window.addEventListener("load", function () {
+function hideLoading() {
   loadingElement.classList.add("loaded");
   document.body.classList.remove("active");
+}
+
+window.addEventListener("load", function () {
+  // Set a timeout to hide the loading element after 5 seconds
+  setTimeout(hideLoading, 3000);
 });
 
 

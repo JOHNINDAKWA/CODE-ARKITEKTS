@@ -10,7 +10,7 @@ function hideLoading() {
 
 window.addEventListener("load", function () {
   // Set a timeout to hide the loading element after 5 seconds
-  setTimeout(hideLoading, 3000);
+  setTimeout(hideLoading, 1000);
 });
 
 

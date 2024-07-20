@@ -2368,7 +2368,7 @@ footer form button:hover {
 }
 .subscribe-form button {
     position: absolute;
-    right: 50px;
+    right: 0;
     background: #4D0AD4;
     padding: 13px 20px;
     border: 1px solid #4D0AD4;

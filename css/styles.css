@@ -270,15 +270,15 @@ a {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(to right, #000110, #010633, #01032a);
-
-  z-index: 5;
+  z-index: 9999; /* Ensure it's on top of everything */
   transform-origin: bottom;
-  transition: 0.5s cubic-bezier(0.33, 0.85, 0.4, 0.96);
+  transition: transform 0.5s cubic-bezier(0.33, 0.85, 0.4, 0.96), opacity 0.5s ease;
   transition-delay: 0.5s;
 }
 
 .loading.loaded {
   transform: scaleY(0);
+  opacity: 0; /* Ensure it fades out smoothly */
   pointer-events: none;
 }
 
@@ -287,12 +287,16 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition:  0.5s ease;
+  transition: opacity 0.5s ease; /* Ensure smooth transition for opacity */
 }
 
-.loading.loaded > * { opacity: 0; }
+.loading.loaded > * { 
+  opacity: 0; 
+}
 
-.loading .circle { animation: rotate360 1.5s linear infinite; }
+.loading .circle { 
+  animation: rotate360 1.5s linear infinite; 
+}
 
 @keyframes rotate360 {
   0% { transform: translate(-50%, -50%) rotate(0); }
@@ -657,8 +661,8 @@ aside .pages {
 
 #search-bar form {
   border-radius: 50px;
-  border: 1px solid #6d2f8a;
-  background: #381a46;
+  border: 1px solid #2f378a;
+  background: #1a1a46;
   width: 50%;
   margin: auto;
   display: flex;
@@ -668,7 +672,7 @@ aside .pages {
 
 #search-bar form input {
   border-radius: 50px;
-  background: #381a46;
+  background: #1a1a46;
   border: none;
   outline: none;
   padding: 10px 20px;
@@ -910,7 +914,7 @@ aside .pages {
 }
 
 .header-card div {
-  border-radius: 20px;
+  border-radius: 20px 60px 40px 80px;
   background: linear-gradient(
     11deg,
     #270152 0%,
